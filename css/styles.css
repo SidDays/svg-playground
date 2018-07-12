@@ -13,7 +13,9 @@ body {
 
 /* Style the cat */
 
-path, ellipse, line {
+path,
+ellipse,
+line {
   transition: all 0.5s;
 }
 
@@ -25,7 +27,24 @@ path, ellipse, line {
   transform-origin: 343px 318px;
   transform: rotate(180deg);
 }
+
 .nose-sad {
   transform-origin: center;
   transform: scaleY(0.5);
+}
+
+@keyframes moveEyes {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-66px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.move-around {
+  animation: moveEyes 2s;
 }

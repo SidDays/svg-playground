@@ -1,4 +1,11 @@
-// Eye color
+// Eye controls
+
+document.getElementById("moveEyes").addEventListener("click", function (event) {
+  document.querySelectorAll(".eyeball").forEach(function (el) {
+    el.classList.add("move-around");
+  })
+  console.log('Moved eyes around!');
+});
 
 document.getElementById("eyesGreen").addEventListener("click", function (event) {
   document.querySelectorAll(".eyeball").forEach(function (el) {
