@@ -5,26 +5,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="16x16" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="16x16" />
   <title>SVG Playground</title>
 </head>
 
 <body>
   <h1>SVG Playground</h1>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo quo quibusdam eos excepturi alias reprehenderit ea incidunt.
-    Unde ipsum sapiente enim ab tempore voluptatibus veritatis magni cum, dignissimos laborum. Officiis.</p>
+    Unde ipsum sapiente enim ab tempore voluptatibus veritatis magni cum, dignissimos laborum. Officiis.
+  </p>
 
-  <svg class="shape" width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-    <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-    <g>
-      <title>Layer 1</title>
-      <path id="svg_1" d="m221,220c0,0 -38,-49 5,-79c43,-30 88,-20 109,-7c21,13 85,43 37,90c-48,47 -114,34 -114,34c0,0 -37,-38 -37,-38z"
-        stroke-width="0" stroke="#000000" fill="#00ff00" />
-    </g>
-  </svg>
+  <div>
+    <h2>Eye controls</h2>
+    <button id="eyesBlack">Black eyes</button>
+    <button id="eyesGreen">Green eyes</button>
+  </div>
+
+  <div class="center">
+    <svg class="cat" width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+      <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+      <g display="inline">
+        <title>head</title>
+        <path fill="#007fff" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m116.138878,409.425549c0,0 74.876159,38.507739 207.513927,36.36842c132.637768,-2.139319 231.046434,-29.950464 231.046434,-29.950464c0,0 213.952257,-397.913303 -235.325072,-397.913303c-449.277329,0 -203.235289,391.495346 -203.235289,391.495346l0,0.000001z"
+          id="svg_7" stroke="#1b3b96" />
+        <path fill="#ffffff" stroke="#000000" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
+          d="m141.33996,403.94021c0,0 14.46432,22.36158 189.41576,22.36158c174.95145,0 211.77734,-22.36158 211.77734,-22.36158c0,0 115.30256,-270.50204 -205.2004,-264.39283c-320.50296,6.10921 -195.9927,264.39283 -195.9927,264.39283z"
+          id="svg_9" />
+      </g>
+      <g display="inline">
+        <title>eyes</title>
+        <ellipse fill="#ffffff" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="265.644056"
+          cy="141.563119" id="svg_12" rx="67.701333" ry="75.513026" stroke="#000000" />
+        <ellipse class="eyeball" fill="#ffffff" stroke-width="14" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
+          cx="291.170783" cy="174.261253" id="svg_17" rx="15.538008" ry="20.532372" stroke="#000000" />
+        <ellipse fill="#ffffff" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="403.821373"
+          cy="141.520425" rx="67.701333" ry="75.513026" stroke="#000000" id="svg_20" />
+        <ellipse class="eyeball" fill="#ffffff" stroke-width="14" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
+          cx="379.404494" cy="171.998843" rx="15.538008" ry="20.532372" stroke="#000000" id="svg_21" />
+      </g>
+      <g>
+        <title>necklace</title>
+        <path fill="none" stroke-width="25" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" d="m109.15409,407.88633c0,0 48.8312,22.09854 208.65329,27.74863c159.82209,5.65009 229.74059,-20.68543 229.35257,-21.20226"
+          id="svg_25" stroke="#c60000" />
+      </g>
+      <g display="inline">
+        <title>bell</title>
+        <ellipse fill="#ffff00" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" cx="326.686244"
+          cy="435.63278" id="svg_26" rx="35.515453" ry="35.515453" stroke="#6b5900" />
+        <path fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" d="m326.568791,469.435492c-0.514513,0 5.659632,-6.291311 5.659632,-8.178707c0,-1.887391 0.514513,-6.920437 0.334633,-7.242684"
+          id="svg_29" stroke="#6b5900" />
+        <ellipse fill="#ffff00" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" cx="332.016303"
+          cy="455.021038" id="svg_30" rx="6.302896" ry="6.302896" stroke="#6b5900" />
+        <path fill="#ffff00" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" d="m290.175933,424.486117c0,0 20.697542,7.748625 39.802966,6.641679c19.105424,-1.106946 33.434492,-6.641679 33.415056,-6.938684c-0.019435,-0.297005 7.183969,4.724791 3.203672,9.152577c-3.980297,4.427786 -19.105424,6.641679 -34.230551,7.748625c-15.125127,1.106946 -35.02661,-1.106946 -42.191144,-6.641679c-7.164534,-5.534732 0,-9.962518 0,-9.962518l0.000001,0z"
+          id="svg_31" stroke="#6b5900" />
+      </g>
+      <g>
+        <title>nose</title>
+        <ellipse fill="#ff0000" stroke="#000000" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
+          cx="335.565107" cy="214.771054" id="svg_22" rx="33.295737" ry="28.856306" />
+        <ellipse fill="#ffbfbf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
+          cx="343.334113" cy="215.880912" id="svg_24" rx="15.538011" ry="13.318295" />
+      </g>
+      <g>
+        <title>mouth</title>
+        <path fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          d="m177.061256,267.139897c0,0 -33.458004,75.415533 149.077218,75.415533c182.535222,0 191.169608,-80.677082 189.493292,-81.231848"
+          id="svg_32" />
+      </g>
+      <g display="none">
+        <title>mouth-sad</title>
+        <path id="svg_1" d="m162,375c1,0 10.681851,-35 168,-35c157.318149,0 192,23 192,23" stroke-linecap="round" stroke-linejoin="null"
+          stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none" />
+      </g>
+      <g>
+        <title>whiskers</title>
+        <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="329.646173" y1="244.339852" x2="329.646173" y2="340.817524" id="svg_35" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="205.12285" y1="230.309055" x2="63.061031" y2="146.124273" id="svg_36" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="215.645948" y1="260.124498" x2="20.96864" y2="254.86295" id="svg_37" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="220.907497" y1="282.924543" x2="27.984039" y2="328.524633" id="svg_38" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="433.1233" y1="228.555205" x2="633.062157" y2="160.15507" id="svg_39" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="433.1233" y1="268.893746" x2="617.27751" y2="265.386047" id="svg_40" />
+        <line fill="none" stroke="#999999" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round"
+          x1="424.354052" y1="293.447641" x2="619.03136" y2="375.878573" id="svg_41" />
+      </g>
+    </svg>
+  </div>
+
   <p>乡乱银国似蒙释窢情信架议。夫面依苏野担价杀数任将。恋证交衣汽显。险左也收萨？跟拉雄未间身前歌珍贵莱仅午计街！随司据草七乡离窗山欧挥钟封。险字示片子送飞求光？红险眼眼盖狗节律罪某课雨他牛族顺。须且素宣克和？毕著引戴舞介收儿所比夫急临适弄孤解忆集！姐疑显足轻时肯该连结遍起留答沉路充银属？参外调冲双女权做错见。牌乐图志棋着尼结。某预发领续女短要红火绝！题伦华资洗光再营端园情东念礼画！城击通拥见特么妇？</p>
+
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
