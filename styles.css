@@ -1,0 +1,12 @@
+.shape path {
+    fill: blue;
+}
+
+.shape {
+    background-color: lightgray;
+    transition: all 0.5s;
+}
+
+.shape:hover {
+    transform: scale(0.9);
+}
