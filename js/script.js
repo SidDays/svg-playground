@@ -14,16 +14,28 @@ document.getElementById("eyesBlack").addEventListener("click", function (event) 
   console.log('Changed eye color to black!');
 });
 
-// Expression
+// Expression switching
+
+// document.getElementById("sad").addEventListener("click", function (event) {
+//   document.querySelector("#mouthSad").setAttribute("display", "inline");
+//   document.querySelector("#mouthHappy").setAttribute("display", "none");
+//   console.log('Changed expression to sad!');
+// });
+
+// document.getElementById("happy").addEventListener("click", function (event) {
+//   document.querySelector("#mouthSad").setAttribute("display", "none");
+//   document.querySelector("#mouthHappy").setAttribute("display", "inline");
+//   console.log('Changed expression to happy!');
+// });
 
 document.getElementById("sad").addEventListener("click", function (event) {
-  document.querySelector("#mouthSad").setAttribute("display", "inline");
-  document.querySelector("#mouthHappy").setAttribute("display", "none");
+  document.querySelector("#mouthSadLine").classList.add('mouth-sad');
+  document.querySelector("#noseSadLine").classList.add('nose-sad');
   console.log('Changed expression to sad!');
 });
 
 document.getElementById("happy").addEventListener("click", function (event) {
-  document.querySelector("#mouthSad").setAttribute("display", "none");
-  document.querySelector("#mouthHappy").setAttribute("display", "inline");
+  document.querySelector("#mouthSadLine").classList.remove('mouth-sad');
+  document.querySelector("#noseSadLine").classList.remove('nose-sad');
   console.log('Changed expression to happy!');
 });

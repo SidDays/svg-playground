@@ -13,6 +13,19 @@ body {
 
 /* Style the cat */
 
+path, ellipse, line {
+  transition: all 0.5s;
+}
+
 .green-eyes {
   stroke: green;
+}
+
+.mouth-sad {
+  transform-origin: 343px 318px;
+  transform: rotate(180deg);
+}
+.nose-sad {
+  transform-origin: center;
+  transform: scaleY(0.5);
 }
