@@ -7,6 +7,13 @@ document.getElementById("moveEyes").addEventListener("click", function (event) {
   console.log('Moved eyes around!');
 });
 
+document.getElementById("stopEyes").addEventListener("click", function (event) {
+  document.querySelectorAll(".eyeball").forEach(function (el) {
+    el.classList.remove("move-around");
+  })
+  console.log('Stopped eyes!');
+});
+
 document.getElementById("eyesGreen").addEventListener("click", function (event) {
   document.querySelectorAll(".eyeball").forEach(function (el) {
     el.classList.add("green-eyes");

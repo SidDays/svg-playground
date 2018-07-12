@@ -46,5 +46,5 @@ line {
 }
 
 .move-around {
-  animation: moveEyes 2s;
+  animation: moveEyes 1.5s infinite;
 }
