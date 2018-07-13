@@ -12,3 +12,34 @@ html, body {
 .svg {
     margin: auto;
 }
+
+path {
+    transition: all 1s;
+}
+
+/* Colors to track blocks */
+
+#g4427 path:nth-of-type(2n) {
+    fill: red;
+}
+#g4427 path:nth-of-type(3n) {
+    fill: green;
+}
+#g4427 path:nth-of-type(5n) {
+    fill: blue;
+}
+#g4427 path:nth-of-type(7n) {
+    fill: cyan;
+}
+#g4427 path:nth-of-type(11n) {
+    fill: magenta;
+}
+
+#g4427 path:nth-of-type(11n) {
+    fill: yellow;
+}
+
+#g4427 path:nth-of-type(13n) {
+    fill: orange;
+}
+
