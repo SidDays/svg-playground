@@ -1,14 +1,16 @@
 /* Some default styling */
 
-body {
-  margin: 40px;
-  line-height: 1.6;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html, body {
+    height: 100%;
+    display: grid;
+    margin:0;
+    padding:0; 
+    overflow:hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.center {
-  margin: 0 auto;
-  text-align: center;
+.svg {
+    margin: auto;
 }
 
 /* Style the cat */
