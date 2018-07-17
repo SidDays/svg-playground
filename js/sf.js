@@ -22,7 +22,7 @@ function zeroIndexedCoordinates(className) {
   var x = className.charCodeAt(0) - 'a'.charCodeAt(0);
   var y = parseInt(className.substring(1))-1;
 
-  console.log(className + ': { ' + x + ', ' + y + ' }');
+  // console.log(className + ': { ' + x + ', ' + y + ' }');
 
   return {
     x: x,
@@ -46,7 +46,7 @@ function cssTranslate(block, positionName, hideAfter) {
   var css = 'transform: translate(' + (yDist) + '%, ' + (xDist) + '%);'
   block.setAttribute('style', css);
 
-  console.log('Moved ' + blockName + ' to ' + positionName);
+  // console.log('Moved ' + blockName + ' to ' + positionName);
 
   if (hideAfter) {
     block.style.visibility = 'hidden';
@@ -97,6 +97,28 @@ transitions.push(function () {
   cssTranslate(blocks['a'][3], 'c-1');
   cssTranslate(blocks['c'][1], 'c-1', true);
   productText.textContent = "SupplyFX";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['a'][2], 'b1');
+  cssTranslate(blocks['b'][3], 'a3', true);
+  cssTranslate(blocks['b'][1], 'c1');
+  cssTranslate(blocks['c'][4], 'b4');
+  cssTranslate(blocks['d'][2], 'd2', true);
+  cssTranslate(blocks['d'][4], 'c4');
+  productText.textContent = "Findchips";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['a'][1], 'a1');
+  cssTranslate(blocks['a'][4], 'a4');
+  cssTranslate(blocks['a'][2], 'b2');
+  cssTranslate(blocks['c'][4], 'b3');
+  cssTranslate(blocks['b'][1], 'c2');
+  cssTranslate(blocks['d'][4], 'c3');
+  cssTranslate(blocks['d'][1], 'd1');
+  cssTranslate(blocks['d'][3], 'd4');
+  productText.textContent = "Hackaday.io";
 })
 
 
