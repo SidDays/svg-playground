@@ -28,5 +28,9 @@ html, body {
 }
 
 path {
-    transition: all 0.5s;
+    transition: all 0.8s ease, opacity 0.1s;
+}
+
+path.jerk {
+    transition-duration: 0s;
 }

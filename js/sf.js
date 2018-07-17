@@ -20,7 +20,7 @@ var step = 22.2;
  */
 function zeroIndexedCoordinates(className) {
   var x = className.charCodeAt(0) - 'a'.charCodeAt(0);
-  var y = parseInt(className.substring(1))-1;
+  var y = parseInt(className.substring(1)) - 1;
 
   // console.log(className + ': { ' + x + ', ' + y + ' }');
 
@@ -30,10 +30,15 @@ function zeroIndexedCoordinates(className) {
   };
 }
 
-function cssTranslate(block, positionName, hideAfter) {
+function cssTranslate(block, positionName, hideAfter, jerk) {
+
+  // FIXME: Jerk doesn't work
+  // if (jerk) {
+  //   block.classList.add('jerk');
+  // }
 
   // It might be hidden at the beginning
-  block.style.visibility = 'visible';
+  block.style.opacity = '100';
 
   // block is starting position, it can be calculated using the block's name
   var blockName = block.getAttribute('class');
@@ -49,12 +54,24 @@ function cssTranslate(block, positionName, hideAfter) {
   // console.log('Moved ' + blockName + ' to ' + positionName);
 
   if (hideAfter) {
-    block.style.visibility = 'hidden';
+    setTimeout(function () {
+      block.style.opacity = '0';
+    }, transitionTime * 0.8);
   }
+
+  // if (jerk) {
+  //   block.classList.remove('jerk');
+  // }
 }
 
 var transitions = [];
-var transitionTime = 1000; // ms
+var transitionTime = 1200; // ms
+
+// transitions.push(function () {
+//   var border = document.querySelector(".border");
+//   border.style.opacity = 0;
+//   productText.textContent = "SupplyFrame";
+// });
 
 transitions.push(function () {
   cssTranslate(blocks['b'][2], 'a2', true);
@@ -121,10 +138,69 @@ transitions.push(function () {
   productText.textContent = "Hackaday.io";
 })
 
+transitions.push(function () {
+  // jerk b2, b3
+  // cssTranslate(blocks['b'][2], 'a2', false, true);
+  // cssTranslate(blocks['b'][3], 'a3', false, true);
+  cssTranslate(blocks['b'][2], 'b2');
+  cssTranslate(blocks['b'][3], 'b3');
+
+
+  cssTranslate(blocks['a'][2], 'b1');
+  cssTranslate(blocks['c'][4], 'b4');
+
+  // jerk c2, c3
+  // cssTranslate(blocks['c'][2], 'c2', false, true);
+  // cssTranslate(blocks['c'][3], 'c3', false, true);
+  cssTranslate(blocks['c'][2], 'd2');
+  cssTranslate(blocks['c'][3], 'd3');
+
+  cssTranslate(blocks['d'][1], 'c1');
+  cssTranslate(blocks['d'][3], 'c4');
+  productText.textContent = "Tindie";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['a'][4], 'b4');
+  cssTranslate(blocks['b'][2], 'a2');
+  cssTranslate(blocks['b'][3], 'a3');
+  cssTranslate(blocks['c'][4], 'c4');
+  cssTranslate(blocks['d'][4], 'b3');
+  cssTranslate(blocks['d'][3], 'd4');
+  productText.textContent = "DesignLab";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['b'][2], 'b2');
+  cssTranslate(blocks['b'][3], 'a4');
+  cssTranslate(blocks['c'][2], 'd1');
+  cssTranslate(blocks['c'][3], 'c3');
+  productText.textContent = "Hackaday.com";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['b'][2], 'a2');
+  cssTranslate(blocks['d'][4], 'a3');
+  cssTranslate(blocks['a'][4], 'b1', true);
+  cssTranslate(blocks['c'][4], 'c1', true);
+  cssTranslate(blocks['d'][3], 'd1', true);
+  productText.textContent = "EEFocus";
+})
+
+transitions.push(function () {
+  cssTranslate(blocks['a'][2], 'b4');
+  cssTranslate(blocks['c'][4], 'c4');
+  cssTranslate(blocks['d'][3], 'd4');
+  productText.textContent = "API";
+})
 
 // Finally. change it back to SupplyFrame
 transitions.push(function () {
-  // TODO: Block arrangement
+  cssTranslate(blocks['a'][3], 'b1');
+  cssTranslate(blocks['b'][4], 'b3');
+  cssTranslate(blocks['a'][4], 'b2');
+  cssTranslate(blocks['c'][1], 'd2');
+  cssTranslate(blocks['d'][2], 'd3');
   productText.textContent = "SupplyFrame";
   var border = document.querySelector(".border");
   border.style.opacity = 100;
