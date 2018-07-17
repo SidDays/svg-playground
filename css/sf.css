@@ -13,6 +13,10 @@ html, body {
     margin: auto;
 }
 
+.path {
+    transition: all 1s;
+}
+
 /* Innitial Positions (to be made dynamic later) */
 
 .frame {
