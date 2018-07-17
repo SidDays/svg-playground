@@ -1,3 +1,5 @@
+var productText = document.getElementById('product');
+
 // Store each block in a 2D array
 var blocks = [];
 for (var i = 0; i < 4; i++) {
@@ -11,9 +13,6 @@ for (var i = 0; i < 4; i++) {
 
 // The % of each block
 var step = 22.2;
-
-// The pixel width of 1% of the blocks
-var percent = blocks['a'][1].style.width;
 
 /**
  * Get the 0-indexed integer coordinates 
@@ -49,7 +48,7 @@ function cssTranslate(block, positionName, hideAfter) {
 
   console.log('Moved ' + blockName + ' to ' + positionName);
 
-  if(hideAfter) {
+  if (hideAfter) {
     block.style.visibility = 'hidden';
   }
 }
@@ -58,22 +57,43 @@ var transitions = [];
 var transitionTime = 1000; // ms
 
 // SupplyFrame to QuoteFX
-transitions.push(function() {
+transitions.push(function () {
   cssTranslate(blocks['b'][2], 'a2', true);
   cssTranslate(blocks['b'][3], 'a3', true);
   cssTranslate(blocks['c'][2], 'd2', true);
   cssTranslate(blocks['c'][3], 'd3', true)
   cssTranslate(blocks['d'][4], 'd3', true);
+  productText.textContent = "QuoteFX";
 })
 
 // QuoteFX to QuoteWin
-transitions.push(function() {
+transitions.push(function () {
   cssTranslate(blocks['a'][2], 'b2');
   cssTranslate(blocks['a'][3], 'c3');
   cssTranslate(blocks['b'][3], 'a3');
   cssTranslate(blocks['d'][3], 'd4');
+  productText.textContent = "QuoteWin";
 })
 
-for(var i = 0; i < transitions.length; i++) {
-  setTimeout(transitions[i], i*transitionTime);
+// QuoteWin to OEMsTrade
+transitions.push(function () {
+  cssTranslate(blocks['a'][1], 'a2');
+  cssTranslate(blocks['b'][3], 'b3');
+  cssTranslate(blocks['a'][4], 'a3');
+  cssTranslate(blocks['d'][1], 'd2');
+  cssTranslate(blocks['d'][2], 'c2');
+  cssTranslate(blocks['d'][3], 'd3');
+  productText.textContent = "OEMsTrade";
+})
+
+// Finally. change it back to SupplyFrame
+transitions.push(function () {
+  // TODO: Block arrangement
+  productText.textContent = "SupplyFrame";
+  var border = document.querySelector(".border");
+  border.style.opacity = 100;
+})
+
+for (var i = 0; i < transitions.length; i++) {
+  setTimeout(transitions[i], i * transitionTime);
 }
