@@ -20,7 +20,7 @@ var step = 22.2;
  */
 function zeroIndexedCoordinates(className) {
   var x = className.charCodeAt(0) - 'a'.charCodeAt(0);
-  var y = parseInt(className.charAt(1) - 1);
+  var y = parseInt(className.substring(1))-1;
 
   console.log(className + ': { ' + x + ', ' + y + ' }');
 
@@ -89,6 +89,14 @@ transitions.push(function () {
   cssTranslate(blocks['d'][2], 'd1');
   cssTranslate(blocks['d'][4], 'd4');
   productText.textContent = "Parts.io";
+})
+
+transitions.push(function () {
+  // Values beyond the grid will still work
+  cssTranslate(blocks['b'][4], 'b6', true);
+  cssTranslate(blocks['a'][3], 'c-1');
+  cssTranslate(blocks['c'][1], 'c-1', true);
+  productText.textContent = "SupplyFX";
 })
 
 
