@@ -6,7 +6,7 @@ html, body {
     margin:0;
     padding:0; 
     overflow:hidden;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 }
 
 .svg {
@@ -20,7 +20,6 @@ html, body {
 
 #product {
     text-align: center;
-    /* font-family: Helvetica, Arial, sans-serif; */
     margin-top: 0.8rem;
     font-size: 1.3em;
 }
