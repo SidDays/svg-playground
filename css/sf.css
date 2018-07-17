@@ -20,43 +20,23 @@ html, body {
 }
 
 /* Sliding Animations */
+/* Slide-In */
 
-/* Sliding - left */
-
-.slide-in-left {
-    animation: slide-in-left 1s forwards;
+.slide-in {
+    animation: slide-in 1s forwards;
 }
 
-.slide-out-left {
-    animation: slide-out-left 1s forwards;
-}
-
-@keyframes slide-in-left {
+@keyframes slide-in {
     100% { transform: translate(0%, 0%); }
 }
-  
-@keyframes slide-out-left {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-}
 
-/* Sliding - right */
+/* Slide-out */
 
-.slide-in-right {
-    animation: slide-in-left 1s forwards;
-    -webkit-animation: slide-in-left 1s forwards;
-}
-
-.slide-out-right {
-    animation: slide-out-right 1s forwards;
-    -webkit-animation: slide-out-right 1s forwards;
-}
-
-@keyframes slide-in-right {
-    100% { transform: translateX(0%); }
+.slide-out {
+    animation: slide-out 1s forwards;
 }
   
-@keyframes slide-out-right {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+@keyframes slide-out {
+    0% { transform: translate(0%, 0%); }
+    100% { transform: translate(-100%, -100%); }
 }

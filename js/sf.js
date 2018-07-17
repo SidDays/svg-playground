@@ -65,12 +65,7 @@ $(function() {
         row = String.fromCharCode(96 + i);
         for (var col=1; col<=4 ; col++) {
             blockName = row + col;
-
-            if (col<=2) {
-                $('.' + blockName).addClass('slide-in-left');
-            } else {
-                $('.' + blockName).addClass('slide-in-right');
-            }
+            $('.' + blockName).addClass('slide-in');
         }
     }
 });
