@@ -1,6 +1,8 @@
 /* Some default styling */
 
 html, body {
+    color: white;
+    background-color: black;
     height: 100%;
     display: grid;
     margin:0;
@@ -11,6 +13,7 @@ html, body {
 
 .svg {
     margin: auto;
+    fill: white;
 }
 
 .border {
