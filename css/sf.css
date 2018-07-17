@@ -15,8 +15,8 @@ html, body {
 
 /* Innitial Positions (to be made dynamic later) */
 
-.block {
-    transform: translateX(-100%);
+.frame {
+    visibility: hidden;
 }
 
 /* Sliding Animations */
@@ -32,7 +32,7 @@ html, body {
 }
 
 @keyframes slide-in-left {
-    100% { transform: translateX(0%); }
+    100% { transform: translate(0%, 0%); }
 }
   
 @keyframes slide-out-left {
