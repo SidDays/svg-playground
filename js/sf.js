@@ -56,7 +56,6 @@ function cssTranslate(block, positionName, hideAfter) {
 var transitions = [];
 var transitionTime = 1000; // ms
 
-// SupplyFrame to QuoteFX
 transitions.push(function () {
   cssTranslate(blocks['b'][2], 'a2', true);
   cssTranslate(blocks['b'][3], 'a3', true);
@@ -66,7 +65,6 @@ transitions.push(function () {
   productText.textContent = "QuoteFX";
 })
 
-// QuoteFX to QuoteWin
 transitions.push(function () {
   cssTranslate(blocks['a'][2], 'b2');
   cssTranslate(blocks['a'][3], 'c3');
@@ -75,7 +73,6 @@ transitions.push(function () {
   productText.textContent = "QuoteWin";
 })
 
-// QuoteWin to OEMsTrade
 transitions.push(function () {
   cssTranslate(blocks['a'][1], 'a2');
   cssTranslate(blocks['b'][3], 'b3');
@@ -85,6 +82,15 @@ transitions.push(function () {
   cssTranslate(blocks['d'][3], 'd3');
   productText.textContent = "OEMsTrade";
 })
+
+transitions.push(function () {
+  cssTranslate(blocks['a'][2], 'a1');
+  cssTranslate(blocks['b'][3], 'a4');
+  cssTranslate(blocks['d'][2], 'd1');
+  cssTranslate(blocks['d'][4], 'd4');
+  productText.textContent = "Parts.io";
+})
+
 
 // Finally. change it back to SupplyFrame
 transitions.push(function () {
