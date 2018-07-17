@@ -31,7 +31,10 @@ function zeroIndexedCoordinates(className) {
   };
 }
 
-function cssTranslate(block, positionName) {
+function cssTranslate(block, positionName, hideAfter) {
+
+  // It might be hidden at the beginning
+  block.style.visibility = 'visible';
 
   // block is starting position, it can be calculated using the block's name
   var blockName = block.getAttribute('class');
@@ -45,11 +48,32 @@ function cssTranslate(block, positionName) {
   block.setAttribute('style', css);
 
   console.log('Moved ' + blockName + ' to ' + positionName);
+
+  if(hideAfter) {
+    block.style.visibility = 'hidden';
+  }
 }
 
+var transitions = [];
+var transitionTime = 1000; // ms
+
 // SupplyFrame to QuoteFX
-cssTranslate(blocks['b'][2], 'a2');
-cssTranslate(blocks['b'][3], 'a3');
-cssTranslate(blocks['c'][2], 'd2');
-cssTranslate(blocks['c'][3], 'd3')
-cssTranslate(blocks['d'][4], 'd3');
+transitions.push(function() {
+  cssTranslate(blocks['b'][2], 'a2', true);
+  cssTranslate(blocks['b'][3], 'a3', true);
+  cssTranslate(blocks['c'][2], 'd2', true);
+  cssTranslate(blocks['c'][3], 'd3', true)
+  cssTranslate(blocks['d'][4], 'd3', true);
+})
+
+// QuoteFX to QuoteWin
+transitions.push(function() {
+  cssTranslate(blocks['a'][2], 'b2');
+  cssTranslate(blocks['a'][3], 'c3');
+  cssTranslate(blocks['b'][3], 'a3');
+  cssTranslate(blocks['d'][3], 'd4');
+})
+
+for(var i = 0; i < transitions.length; i++) {
+  setTimeout(transitions[i], i*transitionTime);
+}
