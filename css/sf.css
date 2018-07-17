@@ -1,52 +1,36 @@
 /* Some default styling */
 
 html, body {
+    color: white;
+    background-color: black;
     height: 100%;
     display: grid;
     margin:0;
     padding:0; 
     overflow:hidden;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 }
 
 .svg {
     margin: auto;
+    fill: white;
 }
 
-/* Style the cat */
-
-path,
-ellipse,
-line {
-  transition: all 0.5s;
+.border {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
-.green-eyes {
-  stroke: green;
+#product {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 1.3em;
 }
 
-.mouth-sad {
-  transform-origin: 343px 318px;
-  transform: rotate(180deg);
+path {
+    transition: all 0.8s ease, opacity 0.1s;
 }
 
-.nose-sad {
-  transform-origin: center;
-  transform: scaleY(0.5);
-}
-
-@keyframes moveEyes {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-66px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.move-around {
-  animation: moveEyes 1.5s infinite;
+path.jerk {
+    transition-duration: 0s;
 }
