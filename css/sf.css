@@ -13,8 +13,13 @@ html, body {
     margin: auto;
 }
 
-.path {
-    transition: all 1s;
+path {
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.jerk {
+    transition-duration: 0s;
 }
 
 /* Innitial Positions (to be made dynamic later) */
