@@ -85,7 +85,7 @@ $(function() {
     });
 
     transitions.push(function () {
-    // Values beyond the grid will still work
+        // Values beyond the grid will still work
         cssTranslate('b4', 'b6', true);
         cssTranslate('a3', 'f3', true);
         cssTranslate('c1', 'c0/', true);
@@ -112,17 +112,10 @@ $(function() {
     });
 
     transitions.push(function () {
-    // jerk b2, b3
-    // cssTranslate('b2', 'a2', false, true);
-    // cssTranslate('b3', 'a3', false, true);
         cssTranslate('b2', 'b2');
         cssTranslate('b3', 'b3');
         cssTranslate('a2', 'b1');
         cssTranslate('c4', 'b4');
-
-    // jerk c2, c3
-    // cssTranslate('c2', 'c2', false, true);
-    // cssTranslate('c3', 'c3', false, true);
         cssTranslate('c2', 'd2');
         cssTranslate('c3', 'd3');
 
@@ -171,10 +164,6 @@ $(function() {
         }
         $('.frame').css('visibility', 'visible');        
     });
-
-    // transitions.push( function () {
-    //     $('.svg').css('transform', 'scale(1.2)');
-    // });
 
     transitions.push( function () {
         $('.svg').addClass('outro');

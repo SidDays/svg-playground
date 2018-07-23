@@ -86,25 +86,3 @@ path {
         transform: scale(0.3) translate(-130% ,0%);
     }
 }
-
-/* Sliding Animations */
-/* Slide-In */
-
-/* .slide-in {
-    animation: slide-in 1s forwards;
-}
-
-@keyframes slide-in {
-    100% { transform: translate(0%, 0%); }
-} */
-
-/* Slide-out */
-
-/* .slide-out {
-    animation: slide-out 1s forwards;
-}
-  
-@keyframes slide-out {
-    0% { transform: translate(0%, 0%); }
-    100% { transform: translate(-100%, -100%); }
-} */
