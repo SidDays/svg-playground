@@ -1,3 +1,5 @@
+// TODO: Change jQuery to VanillaJS
+
 /** 
  * rows - letters labelled a,b,c,d
  * columns - numbers labelled 1,2,3,4
