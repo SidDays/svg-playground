@@ -1,8 +1,6 @@
 /* Some default styling */
 
 html, body {
-    color: white;
-    background-color: black;
     height: 100%;
     display: grid;
     margin:0;
@@ -13,24 +11,100 @@ html, body {
 
 .svg {
     margin: auto;
-    fill: white;
-}
-
-.border {
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-#product {
-    text-align: center;
-    margin-top: 0.8rem;
-    font-size: 1.3em;
+    transition: all 200ms;
 }
 
 path {
-    transition: all 0.8s ease, opacity 0.1s;
+    transition: all 500ms;
 }
 
-path.jerk {
-    transition-duration: 0s;
+/* Innitial Positions and Settings */
+
+.frame {
+    visibility: hidden;
 }
+
+.a1 {
+    transform: translate(-100% ,-100%);
+}
+.a2 {
+    transform: translate(-50% ,-100%);
+}
+.a3 {
+    transform: translate(50% ,-100%);
+}
+.a4 {
+    transform: translate(100% ,-100%);
+}
+.b1 {
+    transform: translate(-100% ,-50%);
+}
+.b2 {
+    transform: translate(-100% ,-100%);
+}
+.b3 {
+    transform: translate(100% ,-100%);
+}
+.b4 {
+    transform: translate(100% ,-50%);
+}
+.c1 {
+    transform: translate(-100% ,50%);
+}
+.c2 {
+    transform: translate(-100% ,100%);
+}
+.c3 {
+    transform: translate(100% ,100%);
+}
+.c4 {
+    transform: translate(100% ,50%);
+}
+.d1 {
+    transform: translate(-100% ,100%);
+}
+.d2 {
+    transform: translate(-50% ,100%);
+}
+.d3 {
+    transform: translate(50% ,100%);
+}
+.d4 {
+    transform: translate(100% ,100%);
+}
+
+/* Scale Animation */
+.outro {
+    animation: outro 1s forwards;
+}
+
+@keyframes outro {
+    33% { 
+        transform: scale(1.1); 
+    }    
+    100% { 
+        transform: scale(0.3) translate(-130% ,0%);
+    }
+}
+
+/* Sliding Animations */
+/* Slide-In */
+
+/* .slide-in {
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translate(0%, 0%); }
+} */
+
+/* Slide-out */
+
+/* .slide-out {
+    animation: slide-out 1s forwards;
+}
+  
+@keyframes slide-out {
+    0% { transform: translate(0%, 0%); }
+    100% { transform: translate(-100%, -100%); }
+} */
