@@ -1,0 +1,25 @@
+/* Colors to track blocks */
+
+#blocks path:nth-of-type(2n) {
+  fill: red;
+}
+#blocks path:nth-of-type(3n) {
+  fill: green;
+}
+#blocks path:nth-of-type(5n) {
+  fill: blue;
+}
+#blocks path:nth-of-type(7n) {
+  fill: cyan;
+}
+#blocks path:nth-of-type(11n) {
+  fill: magenta;
+}
+
+#blocks path:nth-of-type(11n) {
+  fill: yellow;
+}
+
+#blocks path:nth-of-type(13n) {
+  fill: orange;
+}
