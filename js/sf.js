@@ -178,10 +178,10 @@ $(function() {
         $('.product').html("Supplyframe");
     });
 
-    transitions.push( function () {
-        $('.svg').addClass('outro');
-        $('.product').addClass('text-anime');
-    });
+    // transitions.push( function () {
+    //     $('.svg').addClass('outro');
+    //     $('.product').addClass('text-anime');
+    // });
 
     var sum = 0;
     for (var i = 0; i < transitions.length; i++) {
