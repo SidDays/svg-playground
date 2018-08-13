@@ -180,6 +180,7 @@ $(function() {
 
     transitions.push( function () {
         $('.svg').addClass('outro');
+        $('.product').addClass('text-anime');
     });
 
     var sum = 0;
