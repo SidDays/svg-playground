@@ -59,6 +59,7 @@ $(function() {
         cssTranslate('c2', 'd2', true);
         cssTranslate('c3', 'd3', true)
         cssTranslate('d4', 'd3', true);
+        $('.product').html("QuoteFX");
     });
 
     transitions.push(function () {
@@ -66,6 +67,7 @@ $(function() {
         cssTranslate('a3', 'c3');
         cssTranslate('b3', 'a3');
         cssTranslate('d3', 'd4');
+        $('.product').html("QuoteWin");
     });
 
     transitions.push(function () {
@@ -75,6 +77,7 @@ $(function() {
         cssTranslate('d1', 'd2');
         cssTranslate('d2', 'c2');
         cssTranslate('d3', 'd3');
+        $('.product').html("OEMsTrade");
     })
 
     transitions.push(function () {
@@ -82,6 +85,7 @@ $(function() {
         cssTranslate('b3', 'a4');
         cssTranslate('d2', 'd1');
         cssTranslate('d4', 'd4');
+        $('.product').html("Parts.io");
     });
 
     transitions.push(function () {
@@ -89,6 +93,7 @@ $(function() {
         cssTranslate('b4', 'b6', true);
         cssTranslate('a3', 'f3', true);
         cssTranslate('c1', 'c0/', true);
+        $('.product').html("SupplyFX");
     })
 
     transitions.push(function () {
@@ -98,6 +103,7 @@ $(function() {
         cssTranslate('c4', 'b4');
         cssTranslate('d2', 'd2', true);
         cssTranslate('d4', 'c4');
+        $('.product').html("Findchips");
     })
 
     transitions.push(function () {
@@ -109,6 +115,7 @@ $(function() {
         cssTranslate('d4', 'c3');
         cssTranslate('d1', 'd1');
         cssTranslate('d3', 'd4');
+        $('.product').html("Hackaday.io");
     });
 
     transitions.push(function () {
@@ -121,6 +128,7 @@ $(function() {
 
         cssTranslate('d1', 'c1');
         cssTranslate('d3', 'c4');
+        $('.product').html("Tindie");
     })
 
     transitions.push(function () {
@@ -130,6 +138,7 @@ $(function() {
         cssTranslate('c4', 'c4');
         cssTranslate('d4', 'b3');
         cssTranslate('d3', 'd4');
+        $('.product').html("DesignLab");
     });
 
     transitions.push(function () {
@@ -137,6 +146,7 @@ $(function() {
         cssTranslate('b3', 'a4');
         cssTranslate('c2', 'd1');
         cssTranslate('c3', 'c3');
+        $('.product').html("Hackaday.com");
     })
 
     transitions.push(function () {
@@ -145,12 +155,14 @@ $(function() {
         cssTranslate('a4', 'b1', true);
         cssTranslate('c4', 'c1', true);
         cssTranslate('d3', 'd1', true);
+        $('.product').html("EEFocus");
     });
 
     transitions.push(function () {
         cssTranslate('a2', 'b4');
         cssTranslate('c4', 'c4');
         cssTranslate('d3', 'd4');
+        $('.product').html("API");
     });
 
     // Finally change it back to SupplyFrame
@@ -163,6 +175,7 @@ $(function() {
             }
         }
         $('.frame').css('visibility', 'visible');        
+        $('.product').html("Supplyframe");
     });
 
     transitions.push( function () {
@@ -212,18 +225,6 @@ $(function() {
 // console.log('finalX : ' + finalX + ', finalY : ' + finalY);
 // console.log('Moved ' + currentPos + ' to ' + endPos);
 
-// $('.product').html("QuoteFX");
-// $('.product').html("QuoteWin");
-// $('.product').html("OEMsTrade");
-// $('.product').html("Parts.io");
-// $('.product').html("SupplyFX");
-// $('.product').html("Findchips");
-// $('.product').html("Hackaday.io");
-// $('.product').html("Tindie");
-// $('.product').html("DesignLab");
-// $('.product').html("Hackaday.com");
-// $('.product').html("EEFocus");
-// $('.product').html("API");
-// $('.product').html("Supplyframe");
+
 // var border = document.querySelector(".border");
 // border.style.opacity = 100;
