@@ -1,0 +1,16 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "at-rule-no-unknown": [true, {
+            "ignoreAtRules": [
+                "mixin",
+                "include",
+                "if",
+                "else",
+                "content",
+                "at-root"
+            ]
+        }],
+        "indentation": 4
+    }
+}

@@ -193,39 +193,3 @@ $(function() {
     }
 });
 
-
-// written but unused - 
-
-/*
-* innitial positions of the blocks
-*/
-// for (var i=1; i<=4 ; i++) {
-//     var x, y , x_mod, y_mod;
-//     row = String.fromCharCode(96 + i);
-//     for (var col=1; col<=4 ; col++) {
-//         blockName = row + col;                        
-//         x_mod = (col<=2) ? -100 : 100;
-//         y_mod = (i<=2) ? -100 : 100;
-//         if (i+col==5 || i==col) { // diagonal blocks
-//             x = x_mod;
-//             y = y_mod;
-//         } else { // non-diagonal blocks
-//             if (i==1 || i==4) {
-//                 x = x_mod * 0.5;
-//                 y = y_mod;
-//             } else if (i==2 || i==3) {
-//                 x = x_mod;
-//                 y = y_mod * 0.5;
-//             }
-//         }
-//         $('.' + blockName).css('transform', 'translate(' + x + '%,' + y + '%' + ')');
-//     }
-// }
-
-// console.log('pos1 : ' + pos1.x + ', ' + pos1.y + ' - pos2 : ' + pos2.x + ', ' + pos2.y);
-// console.log('finalX : ' + finalX + ', finalY : ' + finalY);
-// console.log('Moved ' + currentPos + ' to ' + endPos);
-
-
-// var border = document.querySelector(".border");
-// border.style.opacity = 100;

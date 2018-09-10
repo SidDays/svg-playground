@@ -1,0 +1,29 @@
+{
+  "name": "svg-playground",
+  "version": "0.1.0",
+  "description": "Animated doodles using SVG and CSS animations",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidrk/svg-playground.git"
+  },
+  "keywords": [
+    "svg",
+    "css",
+    "animations"
+  ],
+  "author": "Siddhesh Rajiv Karekar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sidrk/svg-playground/issues"
+  },
+  "homepage": "https://github.com/sidrk/svg-playground#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}
