@@ -49,7 +49,7 @@ $(function() {
 
     
     var transitions = [];
-    var transitionTime = 500; // ms
+    var transitionTime = 1000; // ms
 
     $('.block').css('transform', 'translate(0%, 0%)');
 
